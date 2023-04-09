@@ -1,13 +1,13 @@
 ﻿// Tak, sam napisałem praktycznie cały kod
 // Tak, potrafię go wyjaśnić
+// Tak, wolę komentować po angielsku
 // Tak, dijkstra boli
 // Tak, pisałem to 2 dni
 // Tak, stworzyłem ze 2 prototypy w pythonie
 // Tak, przepisywałem ten kod z pythona kilka razy za każdym razem zaczynając od nowa
 // Tak, nie wiem jak to napisać lepiej
 // Tak, jest skalowalny więc można go użyć do większych grafów i w innych projektach
-// Tak, jestem dumny z tego kodu, bo wykorzystuje w praktyce ciekawe algorytmy
-// Tak, jestem dumny z tego kodu, bo się okazuje, że jestem w stanie napisać takie rzeczy
+
 // Pozdrawiam Pana Dyrektora B)
 
 // Usage notes:
