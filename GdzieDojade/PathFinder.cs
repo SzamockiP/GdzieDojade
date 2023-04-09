@@ -113,17 +113,27 @@ namespace GdzieDojade
                 // if destination is not in cities, throw exception
                 throw new Exception("Invalid destination");
 
-            switch (pathFindType)
+            if (source == destination)
+                // if destination is the same as source
+                throw new Exception("Departure can't be the same as destination");
+
+            try
             {
-                case 0: // Shortest
-                    return FindShortestConnectionsPath(source, destination, startTime);
-                case 1: // Cheapest
-                    return FindCheapestConnectionsPath(source, destination, startTime);
-                case 2: // Fastest
-                    return FindFastestConnectionsPath(source, destination, startTime);
-                default: // Shortest
-                    return FindShortestConnectionsPath(source, destination, startTime);
+                switch (pathFindType)
+                {
+                    case 0: // Shortest
+                        return FindShortestConnectionsPath(source, destination, startTime);
+                    case 1: // Cheapest
+                        return FindCheapestConnectionsPath(source, destination, startTime);
+                    case 2: // Fastest
+                        return FindFastestConnectionsPath(source, destination, startTime);
+                    default: // Shortest
+                        return FindShortestConnectionsPath(source, destination, startTime);
+                }
             }
+            // If there is no path, throw exception
+            catch (Exception ex) { throw new Exception(ex.Message); }
+            
         }
 
         // Writes connectionsPath to the console
@@ -284,6 +294,8 @@ namespace GdzieDojade
 
             // Find path using Dijkstra's algorithm, returns list of city id's
             List<int> path = Dijkstra(adjacencyMatrix, source, destination);
+            if (path.Count == 0)
+                throw new Exception("No connection found");
 
             List<Connection> connectionsPath = new List<Connection>();
             DateTime currentTime = startTime;
@@ -296,7 +308,7 @@ namespace GdzieDojade
                 {
                     connections = FindConnections(path[i], path[i + 1], currentTime);
                 }
-                catch (Exception ex) { throw new Exception(ex.Message); }
+                catch (Exception ex) { throw new Exception(ex.Message);}
 
                 // set fastestConnection to first aveilable connection
                 Connection fastestConneciton = connections[0];
@@ -324,6 +336,8 @@ namespace GdzieDojade
 
             // Find path using Dijkstra's algorithm, returns list of city id's
             List<int> path = Dijkstra(adjacencyMatrix, source, destination);
+            if (path.Count == 0)
+                throw new Exception("No connection found");
 
             List<Connection> connectionsPath = new List<Connection>();
             DateTime currentTime = startTime;
@@ -365,6 +379,9 @@ namespace GdzieDojade
 
             // Find path using Dijkstra's algorithm, returns list of city id's
             List<int> path = Dijkstra(adjacencyMatrix, source, destination);
+            if(path.Count == 1 )
+                throw new Exception("No connection found");
+
 
             List<Connection> connectionsPath = new List<Connection>();
             DateTime currentTime = startTime;
@@ -378,7 +395,7 @@ namespace GdzieDojade
                 {
                     connections = FindConnections(path[i], path[i + 1], currentTime);
                 }
-                catch(Exception ex) { throw new Exception(ex.Message); }
+                catch(Exception ex) { Console.WriteLine(ex.Message); throw new Exception(ex.Message); }
 
                 // set shortestConnection to first aveilable connection
                 Connection shortestConnection = connections[0];
