@@ -18,11 +18,12 @@ namespace GdzieDojade
         private Dictionary<int, string> _cities;
         private Dictionary<int, string> _transportTypes;
         private PathFinder _pathFinder;
+        private string _sqlConnectionString;
 
-
-        public SearchConnectionControl(string connectionString)
+        public SearchConnectionControl(string sqlConnectionString)
         {
             InitializeComponent();
+            _sqlConnectionString = sqlConnectionString;
         }
 
         private void SearchConnectionControl_Load(object sender, EventArgs e)
@@ -98,7 +99,7 @@ namespace GdzieDojade
                 {2, "Train"}
             };
 
-             // Create path finder
+            // Create path finder
             _pathFinder = new PathFinder(_connections, _cities, _transportTypes);
 
             // Create path finder
@@ -111,6 +112,82 @@ namespace GdzieDojade
             // Get cities id's
             int sourceId = (int)numSourceId.Value;
             int destinationId = (int)numDestinationId.Value;
+
+            // Connect to database
+            //using (SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TravelAgency;Integrated Security=True"))
+            //{
+            //    connection.Open();
+            //    // Create command
+            //    SqlCommand command = new SqlCommand("SELECT * FROM Connections", connection);
+            //    // Execute command
+            //    SqlDataReader reader = command.ExecuteReader();
+            //    // Read data
+            //    while (reader.Read())
+            //    {
+            //        // Get data
+            //        int id = (int)reader["Id"];
+            //        int source = (int)reader["Source"];
+            //        int destination = (int)reader["Destination"];
+            //        int distance = (int)reader["Distance"];
+            //        int price = (int)reader["Price"];
+            //        DateTime departure = (DateTime)reader["Departure"];
+            //        DateTime arrival = (DateTime)reader["Arrival"];
+            //        int transportType = (int)reader["TransportType"];
+            //        // Add connection to list
+            //        _connections.Add(new Connection(id, source, destination, distance, price, departure, arrival, transportType));
+            //    }
+            //    // Close reader
+            //    reader.Close();
+            //    // Create command
+            //    command = new SqlCommand("SELECT * FROM Cities", connection);
+            //    // Execute command
+            //    reader = command.ExecuteReader();
+            //    // Read data
+            //    while (reader.Read())
+            //    {
+            //        // Get data
+            //        int id = (int)reader["Id"];
+            //        string name = (string)reader["Name"];
+            //        // Add city to dictionary
+            //        _cities.Add(id, name);
+            //    }
+            //    // Close reader
+            //    reader.Close();
+            //    // Create command
+            //    command = new SqlCommand("SELECT * FROM TransportTypes", connection);
+            //    // Execute command
+            //    reader = command.ExecuteReader();
+            //    // Read data
+            //    while (reader.Read())
+            //    {
+            //        // Get data
+            //        int id = (int)reader["Id"];
+            //        string name = (string)reader["Name"];
+            //        // Add transport type to dictionary
+            //        _transportTypes.Add(id, name);
+            //    }
+            //    // Close reader
+            //    reader.Close();
+            //}
+
+            // Connect to database
+            using (SqlConnection connection = new SqlConnection(_sqlConnectionString))
+            {
+                try
+                {
+                    connection.Open(); // Open the connection
+                    MessageBox.Show("Connected to the database!");
+
+                    // Perform database operations here...
+
+                    connection.Close(); // Close the connection
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error connecting to the database", ex.Message);
+                }
+            }
+
 
             try
             {
