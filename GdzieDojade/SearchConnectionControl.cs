@@ -15,8 +15,8 @@ namespace GdzieDojade
     public partial class SearchConnectionControl : UserControl
     {
         private List<Connection> _connections = new List<Connection>();
-        private Dictionary<int, string> _cities;
-        private Dictionary<int, string> _transportTypes;
+        private Dictionary<int, string> _cities = new Dictionary<int, string>();
+        private Dictionary<int, string> _transportTypes = new Dictionary<int, string>();
         private PathFinder _pathFinder;
         private string _sqlConnectionString;
 
@@ -36,12 +36,12 @@ namespace GdzieDojade
                     // Open the connection
                     connection.Open();
 
-                    // Create command
+
+
+                    // Create command to get all connections
                     SqlCommand command = new SqlCommand("SELECT * FROM Connections", connection);
-                    
                     // Execute command
                     SqlDataReader reader = command.ExecuteReader();
-                    
                     // Read data
                     while (reader.Read())
                     {
@@ -57,9 +57,46 @@ namespace GdzieDojade
                         // Add connection to list
                         _connections.Add(new Connection(id, source, destination, distance, price, departure, arrival, transportType));
                     }
-                    
                     // Close reader
                     reader.Close();
+
+
+
+                    // Create command to get all cities
+                    command = new SqlCommand("SELECT * FROM Cities", connection);
+                    // Execute command
+                    reader = command.ExecuteReader();
+                    // Read data
+                    while (reader.Read())
+                    {
+                        // Get data
+                        int id = (int)reader["Id"];
+                        string name = (string)reader["Name"];
+                        // Add city to dictionary
+                        _cities.Add(id, name);
+                    }
+                    // Close reader
+                    reader.Close();
+
+
+
+                    // Create command to get all transport types
+                    command = new SqlCommand("SELECT * FROM TransportTypes", connection);
+                    // Execute command
+                    reader = command.ExecuteReader();
+                    // Read data
+                    while (reader.Read())
+                    {
+                        // Get data
+                        int id = (int)reader["Id"];
+                        string name = (string)reader["Name"];
+                        // Add transport type to dictionary
+                        _transportTypes.Add(id, name);
+                    }
+                    // Close reader
+                    reader.Close();
+
+
 
                     // Close the connection
                     connection.Close(); 
@@ -70,27 +107,27 @@ namespace GdzieDojade
                 }
             }
 
-            // Create cities dictionary
-            _cities = new Dictionary<int, string>()
-            {
-                {0, "Gdańsk"},
-                {1, "Warszawa"},
-                {2, "Kraków"},
-                {3, "Bydgoszcz"},
-                {4, "Słupsk"},
-                {5, "Wrocław"}
-            };
+            //// Create cities dictionary
+            //_cities = new Dictionary<int, string>()
+            //{
+            //    {0, "Gdańsk"},
+            //    {1, "Warszawa"},
+            //    {2, "Kraków"},
+            //    {3, "Bydgoszcz"},
+            //    {4, "Słupsk"},
+            //    {5, "Wrocław"}
+            //};
 
-            // Create transport types dictionary
-            _transportTypes = new Dictionary<int, string>()
-            {
-                {0, "Bus"},
-                {1, "Plane"},
-                {2, "Train"}
-            };
+            //// Create transport types dictionary
+            //_transportTypes = new Dictionary<int, string>()
+            //{
+            //    {0, "Bus"},
+            //    {1, "Plane"},
+            //    {2, "Train"}
+            //};
 
-            // Create path finder
-            _pathFinder = new PathFinder(_connections, _cities, _transportTypes);
+            //// Create path finder
+            //_pathFinder = new PathFinder(_connections, _cities, _transportTypes);
 
             // Create path finder
             _pathFinder = new PathFinder(_connections, _cities, _transportTypes);
