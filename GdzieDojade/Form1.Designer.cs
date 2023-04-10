@@ -44,6 +44,7 @@
             // 
             // pnlNavBar
             // 
+            this.pnlNavBar.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlNavBar.Controls.Add(this.buttonClose);
             this.pnlNavBar.Controls.Add(this.btnOpenSearchConnectionPanel);
             this.pnlNavBar.Dock = System.Windows.Forms.DockStyle.Right;
@@ -54,28 +55,39 @@
             // 
             // buttonClose
             // 
+            this.buttonClose.BackColor = System.Drawing.Color.White;
             this.buttonClose.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.buttonClose.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonClose.Location = new System.Drawing.Point(0, 534);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(223, 40);
             this.buttonClose.TabIndex = 1;
             this.buttonClose.Text = "Zamknij";
-            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // btnOpenSearchConnectionPanel
             // 
+            this.btnOpenSearchConnectionPanel.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.btnOpenSearchConnectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOpenSearchConnectionPanel.FlatAppearance.BorderSize = 0;
+            this.btnOpenSearchConnectionPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenSearchConnectionPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenSearchConnectionPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOpenSearchConnectionPanel.Location = new System.Drawing.Point(0, 0);
             this.btnOpenSearchConnectionPanel.Name = "btnOpenSearchConnectionPanel";
             this.btnOpenSearchConnectionPanel.Size = new System.Drawing.Size(223, 40);
             this.btnOpenSearchConnectionPanel.TabIndex = 0;
             this.btnOpenSearchConnectionPanel.Text = "Wyszukiwarka Połączeń";
-            this.btnOpenSearchConnectionPanel.UseVisualStyleBackColor = true;
+            this.btnOpenSearchConnectionPanel.UseVisualStyleBackColor = false;
             this.btnOpenSearchConnectionPanel.Click += new System.EventHandler(this.btnOpenSearchConnectionPanel_Click);
             // 
             // pnlMain
             // 
+            this.pnlMain.BackColor = System.Drawing.Color.White;
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";

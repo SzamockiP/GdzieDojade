@@ -40,7 +40,7 @@
             // 
             // numSourceId
             // 
-            this.numSourceId.Location = new System.Drawing.Point(44, 46);
+            this.numSourceId.Location = new System.Drawing.Point(112, 270);
             this.numSourceId.Name = "numSourceId";
             this.numSourceId.Size = new System.Drawing.Size(120, 20);
             this.numSourceId.TabIndex = 13;
@@ -48,7 +48,7 @@
             // lblReturn
             // 
             this.lblReturn.AutoSize = true;
-            this.lblReturn.Location = new System.Drawing.Point(41, 104);
+            this.lblReturn.Location = new System.Drawing.Point(109, 328);
             this.lblReturn.Name = "lblReturn";
             this.lblReturn.Size = new System.Drawing.Size(64, 13);
             this.lblReturn.TabIndex = 9;
@@ -56,7 +56,7 @@
             // 
             // numDestinationId
             // 
-            this.numDestinationId.Location = new System.Drawing.Point(44, 68);
+            this.numDestinationId.Location = new System.Drawing.Point(112, 292);
             this.numDestinationId.Name = "numDestinationId";
             this.numDestinationId.Size = new System.Drawing.Size(120, 20);
             this.numDestinationId.TabIndex = 14;
@@ -64,7 +64,7 @@
             // lblSource
             // 
             this.lblSource.AutoSize = true;
-            this.lblSource.Location = new System.Drawing.Point(170, 48);
+            this.lblSource.Location = new System.Drawing.Point(238, 272);
             this.lblSource.Name = "lblSource";
             this.lblSource.Size = new System.Drawing.Size(14, 13);
             this.lblSource.TabIndex = 10;
@@ -73,7 +73,7 @@
             // lblDestination
             // 
             this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(170, 70);
+            this.lblDestination.Location = new System.Drawing.Point(238, 294);
             this.lblDestination.Name = "lblDestination";
             this.lblDestination.Size = new System.Drawing.Size(21, 13);
             this.lblDestination.TabIndex = 11;
@@ -81,7 +81,7 @@
             // 
             // btnSearchConnection
             // 
-            this.btnSearchConnection.Location = new System.Drawing.Point(44, 121);
+            this.btnSearchConnection.Location = new System.Drawing.Point(112, 345);
             this.btnSearchConnection.Name = "btnSearchConnection";
             this.btnSearchConnection.Size = new System.Drawing.Size(75, 23);
             this.btnSearchConnection.TabIndex = 12;
@@ -93,6 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.numSourceId);
             this.Controls.Add(this.lblReturn);
             this.Controls.Add(this.numDestinationId);
