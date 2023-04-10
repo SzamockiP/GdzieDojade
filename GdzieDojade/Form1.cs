@@ -23,8 +23,11 @@ namespace GdzieDojade
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'gdzieDojadeDBDataSet.Connections' table. You can move, or remove it, as needed.
+            this.connectionsTableAdapter.Fill(this.gdzieDojadeDBDataSet.Connections);
+
             // Create connection string
-            string connectionString = "Data Source=.;Initial Catalog=Connections;Integrated Security=True";
+            string connectionString = Properties.Settings.Default.GdzieDojadeDBConnectionString;
 
             // Create search connection control
             _searchConnectionControl = new SearchConnectionControl(connectionString);
@@ -32,6 +35,30 @@ namespace GdzieDojade
             // Add search connection control to main panel
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(_searchConnectionControl);
+
+        }
+
+        private void btnOpenSearchConnectionPanel_Click(object sender, EventArgs e)
+        {
+            // If search connection control is already in main panel, don't do anything
+            if(pnlMain.Controls.Count > 0 && pnlMain.Controls[0] == _searchConnectionControl)
+                return;
+
+            // Put search connection control to main panel
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(_searchConnectionControl);
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void connectionsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.connectionsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.gdzieDojadeDBDataSet);
 
         }
     }

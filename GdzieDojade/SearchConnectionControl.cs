@@ -23,9 +23,6 @@ namespace GdzieDojade
         public SearchConnectionControl(string connectionString)
         {
             InitializeComponent();
-
-            // Connect with database
-            SqlConnection sqlConnection = new SqlConnection(connectionString);
         }
 
         private void SearchConnectionControl_Load(object sender, EventArgs e)
