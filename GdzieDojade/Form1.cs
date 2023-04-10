@@ -21,7 +21,7 @@ namespace GdzieDojade
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'gdzieDojadeDBDataSet.Connections' table. You can move, or remove it, as needed.
             this.connectionsTableAdapter.Fill(this.gdzieDojadeDBDataSet.Connections);

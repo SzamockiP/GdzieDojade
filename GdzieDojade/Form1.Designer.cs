@@ -123,7 +123,7 @@
             this.Controls.Add(this.pnlNavBar);
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlNavBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdzieDojadeDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.connectionsBindingSource)).EndInit();
