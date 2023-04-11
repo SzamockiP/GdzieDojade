@@ -39,7 +39,6 @@ namespace GdzieDojade
                 // Insert into flpConnections connection panel
                 flpConnections.Controls.Add(new ConnectionPanel(conn, _cities, _transportTypes));
             }
-
         }
     }
 }

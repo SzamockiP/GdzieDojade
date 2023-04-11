@@ -235,15 +235,14 @@ namespace GdzieDojade
                     MessageBox.Show("Error connecting to the database", ex.Message);
                 }
             }
-
+            pnlConnectionResponse.Controls.Clear();
             try
             {
                 // Find path between two cities
                 List<Connection> path = _pathFinder.FindPath(sourceId, destinationId, departureTime, searchType);
 
                 // Write path to console
-                _pathFinder.WritePath(path);
-                //lblReturn.Text = _pathFinder.PathToString(path);
+                //_pathFinder.WritePath(path);
 
                 // Show path in pnlConnectionResponse
                 pnlConnectionResponse.Controls.Add(new ConnectionsDisplay(path, _cities, _transportTypes));
@@ -251,8 +250,8 @@ namespace GdzieDojade
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                //lblReturn.Text = ex.Message;
+                //Console.WriteLine(ex.Message);
+                pnlConnectionResponse.Controls.Add(new ConnectionNotFoundDisplay(ex.Message));
             }
         }
     }

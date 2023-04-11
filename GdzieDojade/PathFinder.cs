@@ -107,15 +107,15 @@ namespace GdzieDojade
         {
             if (!_cities.ContainsKey(source))
                 // if source is not in cities, throw exception
-                throw new Exception("Invalid source");
+                throw new Exception("Złe miejsce początkowe");
 
             if (!_cities.ContainsKey(destination))
                 // if destination is not in cities, throw exception
-                throw new Exception("Invalid destination");
+                throw new Exception("Złe miejsce docelowe");
 
             if (source == destination)
                 // if destination is the same as source
-                throw new Exception("Departure can't be the same as destination");
+                throw new Exception("Lokalizacje nie mogą być takie same");
 
             try
             {
@@ -280,7 +280,7 @@ namespace GdzieDojade
             // Find all connections between source and destination that depart after startTime
             var connections = _connections.Where(c => c.Source == source && c.Destination == destination && c.DepartureTime >= startTime).ToList();
             if (connections.Count == 0)
-                throw new Exception("No connection found");
+                throw new Exception("Nie znaleziono połączenia");
 
             return connections;
         }
@@ -295,7 +295,7 @@ namespace GdzieDojade
             // Find path using Dijkstra's algorithm, returns list of city id's
             List<int> path = Dijkstra(adjacencyMatrix, source, destination);
             if (path.Count == 0)
-                throw new Exception("No connection found");
+                throw new Exception("Nie znaleziono połączenia");
 
             List<Connection> connectionsPath = new List<Connection>();
             DateTime currentTime = startTime;
@@ -337,7 +337,7 @@ namespace GdzieDojade
             // Find path using Dijkstra's algorithm, returns list of city id's
             List<int> path = Dijkstra(adjacencyMatrix, source, destination);
             if (path.Count == 0)
-                throw new Exception("No connection found");
+                throw new Exception("Nie znaleziono połączenia");
 
             List<Connection> connectionsPath = new List<Connection>();
             DateTime currentTime = startTime;
@@ -380,7 +380,7 @@ namespace GdzieDojade
             // Find path using Dijkstra's algorithm, returns list of city id's
             List<int> path = Dijkstra(adjacencyMatrix, source, destination);
             if(path.Count == 1 )
-                throw new Exception("No connection found");
+                throw new Exception("Nie znaleziono połączenia");
 
 
             List<Connection> connectionsPath = new List<Connection>();

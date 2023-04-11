@@ -64,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="ConnectionNotFoundDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConnectionNotFoundDisplay.Designer.cs">
+      <DependentUpon>ConnectionNotFoundDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="SearchConnectionControl.Designer.cs">
       <DependentUpon>SearchConnectionControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConnectionNotFoundDisplay.resx">
+      <DependentUpon>ConnectionNotFoundDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConnectionPanel.resx">
       <DependentUpon>ConnectionPanel.cs</DependentUpon>
     </EmbeddedResource>
