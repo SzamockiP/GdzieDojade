@@ -103,7 +103,7 @@ namespace GdzieDojade
         /// </summary>
         /// <param name="pathFindType"></param>
         /// <returns></returns>
-        public List<Connection> FindPath(int source, int destination, DateTime startTime, short pathFindType = 0)
+        public List<Connection> FindPath(int source, int destination, DateTime startTime, int pathFindType = 0)
         {
             if (!_cities.ContainsKey(source))
                 // if source is not in cities, throw exception
