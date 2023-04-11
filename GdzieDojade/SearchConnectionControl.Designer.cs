@@ -28,60 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numSourceId = new System.Windows.Forms.NumericUpDown();
-            this.lblReturn = new System.Windows.Forms.Label();
-            this.numDestinationId = new System.Windows.Forms.NumericUpDown();
-            this.lblSource = new System.Windows.Forms.Label();
-            this.lblDestination = new System.Windows.Forms.Label();
             this.btnSearchConnection = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numSourceId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDestinationId)).BeginInit();
+            this.pnlSearchData = new System.Windows.Forms.Panel();
+            this.dtpDepartureTime = new System.Windows.Forms.DateTimePicker();
+            this.clbTransportType = new System.Windows.Forms.CheckedListBox();
+            this.cbxSearchType = new System.Windows.Forms.ComboBox();
+            this.cbxSource = new System.Windows.Forms.ComboBox();
+            this.cbxDestination = new System.Windows.Forms.ComboBox();
+            this.pnlSearchData.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // numSourceId
-            // 
-            this.numSourceId.Location = new System.Drawing.Point(112, 270);
-            this.numSourceId.Name = "numSourceId";
-            this.numSourceId.Size = new System.Drawing.Size(120, 20);
-            this.numSourceId.TabIndex = 13;
-            // 
-            // lblReturn
-            // 
-            this.lblReturn.AutoSize = true;
-            this.lblReturn.Location = new System.Drawing.Point(109, 328);
-            this.lblReturn.Name = "lblReturn";
-            this.lblReturn.Size = new System.Drawing.Size(64, 13);
-            this.lblReturn.TabIndex = 9;
-            this.lblReturn.Text = "Połączenie:";
-            // 
-            // numDestinationId
-            // 
-            this.numDestinationId.Location = new System.Drawing.Point(112, 292);
-            this.numDestinationId.Name = "numDestinationId";
-            this.numDestinationId.Size = new System.Drawing.Size(120, 20);
-            this.numDestinationId.TabIndex = 14;
-            // 
-            // lblSource
-            // 
-            this.lblSource.AutoSize = true;
-            this.lblSource.Location = new System.Drawing.Point(238, 272);
-            this.lblSource.Name = "lblSource";
-            this.lblSource.Size = new System.Drawing.Size(14, 13);
-            this.lblSource.TabIndex = 10;
-            this.lblSource.Text = "Z";
-            // 
-            // lblDestination
-            // 
-            this.lblDestination.AutoSize = true;
-            this.lblDestination.Location = new System.Drawing.Point(238, 294);
-            this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(21, 13);
-            this.lblDestination.TabIndex = 11;
-            this.lblDestination.Text = "Do";
             // 
             // btnSearchConnection
             // 
-            this.btnSearchConnection.Location = new System.Drawing.Point(112, 345);
+            this.btnSearchConnection.Location = new System.Drawing.Point(378, 52);
             this.btnSearchConnection.Name = "btnSearchConnection";
             this.btnSearchConnection.Size = new System.Drawing.Size(75, 23);
             this.btnSearchConnection.TabIndex = 12;
@@ -89,34 +48,92 @@
             this.btnSearchConnection.UseVisualStyleBackColor = true;
             this.btnSearchConnection.Click += new System.EventHandler(this.btnSearchConnection_Click);
             // 
+            // pnlSearchData
+            // 
+            this.pnlSearchData.BackColor = System.Drawing.Color.LightYellow;
+            this.pnlSearchData.Controls.Add(this.cbxDestination);
+            this.pnlSearchData.Controls.Add(this.cbxSource);
+            this.pnlSearchData.Controls.Add(this.cbxSearchType);
+            this.pnlSearchData.Controls.Add(this.clbTransportType);
+            this.pnlSearchData.Controls.Add(this.btnSearchConnection);
+            this.pnlSearchData.Controls.Add(this.dtpDepartureTime);
+            this.pnlSearchData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearchData.Location = new System.Drawing.Point(0, 0);
+            this.pnlSearchData.Name = "pnlSearchData";
+            this.pnlSearchData.Size = new System.Drawing.Size(681, 100);
+            this.pnlSearchData.TabIndex = 15;
+            // 
+            // dtpDepartureTime
+            // 
+            this.dtpDepartureTime.Location = new System.Drawing.Point(176, 16);
+            this.dtpDepartureTime.Name = "dtpDepartureTime";
+            this.dtpDepartureTime.Size = new System.Drawing.Size(200, 20);
+            this.dtpDepartureTime.TabIndex = 0;
+            // 
+            // clbTransportType
+            // 
+            this.clbTransportType.FormattingEnabled = true;
+            this.clbTransportType.Items.AddRange(new object[] {
+            "Autobus",
+            "Pociąg",
+            "Samolot"});
+            this.clbTransportType.Location = new System.Drawing.Point(536, 26);
+            this.clbTransportType.Name = "clbTransportType";
+            this.clbTransportType.Size = new System.Drawing.Size(120, 49);
+            this.clbTransportType.TabIndex = 15;
+            // 
+            // cbxSearchType
+            // 
+            this.cbxSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSearchType.FormattingEnabled = true;
+            this.cbxSearchType.Items.AddRange(new object[] {
+            "Najszybsze",
+            "Najtańsze",
+            "Najkrótsze"});
+            this.cbxSearchType.Location = new System.Drawing.Point(176, 42);
+            this.cbxSearchType.Name = "cbxSearchType";
+            this.cbxSearchType.Size = new System.Drawing.Size(121, 21);
+            this.cbxSearchType.TabIndex = 16;
+            // 
+            // cbxSource
+            // 
+            this.cbxSource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSource.FormattingEnabled = true;
+            this.cbxSource.Location = new System.Drawing.Point(23, 15);
+            this.cbxSource.Name = "cbxSource";
+            this.cbxSource.Size = new System.Drawing.Size(121, 21);
+            this.cbxSource.TabIndex = 17;
+            // 
+            // cbxDestination
+            // 
+            this.cbxDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxDestination.FormattingEnabled = true;
+            this.cbxDestination.Location = new System.Drawing.Point(23, 43);
+            this.cbxDestination.Name = "cbxDestination";
+            this.cbxDestination.Size = new System.Drawing.Size(121, 21);
+            this.cbxDestination.TabIndex = 18;
+            // 
             // SearchConnectionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.numSourceId);
-            this.Controls.Add(this.lblReturn);
-            this.Controls.Add(this.numDestinationId);
-            this.Controls.Add(this.lblSource);
-            this.Controls.Add(this.lblDestination);
-            this.Controls.Add(this.btnSearchConnection);
+            this.Controls.Add(this.pnlSearchData);
             this.Name = "SearchConnectionControl";
-            this.Size = new System.Drawing.Size(802, 516);
+            this.Size = new System.Drawing.Size(681, 571);
             this.Load += new System.EventHandler(this.SearchConnectionControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numSourceId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDestinationId)).EndInit();
+            this.pnlSearchData.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.NumericUpDown numSourceId;
-        private System.Windows.Forms.Label lblReturn;
-        private System.Windows.Forms.NumericUpDown numDestinationId;
-        private System.Windows.Forms.Label lblSource;
-        private System.Windows.Forms.Label lblDestination;
         private System.Windows.Forms.Button btnSearchConnection;
+        private System.Windows.Forms.Panel pnlSearchData;
+        private System.Windows.Forms.ComboBox cbxSearchType;
+        private System.Windows.Forms.CheckedListBox clbTransportType;
+        private System.Windows.Forms.DateTimePicker dtpDepartureTime;
+        private System.Windows.Forms.ComboBox cbxDestination;
+        private System.Windows.Forms.ComboBox cbxSource;
     }
 }

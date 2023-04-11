@@ -48,9 +48,9 @@
             this.pnlNavBar.Controls.Add(this.buttonClose);
             this.pnlNavBar.Controls.Add(this.btnOpenSearchConnectionPanel);
             this.pnlNavBar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlNavBar.Location = new System.Drawing.Point(682, 0);
+            this.pnlNavBar.Location = new System.Drawing.Point(681, 0);
             this.pnlNavBar.Name = "pnlNavBar";
-            this.pnlNavBar.Size = new System.Drawing.Size(223, 574);
+            this.pnlNavBar.Size = new System.Drawing.Size(223, 571);
             this.pnlNavBar.TabIndex = 9;
             // 
             // buttonClose
@@ -61,7 +61,7 @@
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.buttonClose.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonClose.Location = new System.Drawing.Point(0, 534);
+            this.buttonClose.Location = new System.Drawing.Point(0, 531);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(223, 40);
             this.buttonClose.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(682, 574);
+            this.pnlMain.Size = new System.Drawing.Size(681, 571);
             this.pnlMain.TabIndex = 10;
             // 
             // gdzieDojadeDBDataSet
@@ -118,9 +118,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 574);
+            this.ClientSize = new System.Drawing.Size(904, 571);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlNavBar);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(920, 610);
+            this.MinimumSize = new System.Drawing.Size(920, 610);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);

@@ -16,6 +16,7 @@ namespace GdzieDojade
     {
         private List<Connection> _connections = new List<Connection>();
         private Dictionary<int, string> _cities = new Dictionary<int, string>();
+        private Dictionary<string, int> _citiesInverted = new Dictionary<string, int>();
         private Dictionary<int, string> _transportTypes = new Dictionary<int, string>();
         private PathFinder _pathFinder;
         private string _sqlConnectionString;
@@ -35,8 +36,6 @@ namespace GdzieDojade
                 {
                     // Open the connection
                     connection.Open();
-
-
 
                     // Create command to get all connections
                     SqlCommand command = new SqlCommand("SELECT * FROM Connections", connection);
@@ -107,27 +106,18 @@ namespace GdzieDojade
                 }
             }
 
-            //// Create cities dictionary
-            //_cities = new Dictionary<int, string>()
-            //{
-            //    {0, "Gdańsk"},
-            //    {1, "Warszawa"},
-            //    {2, "Kraków"},
-            //    {3, "Bydgoszcz"},
-            //    {4, "Słupsk"},
-            //    {5, "Wrocław"}
-            //};
+            // Fill citiesInverted dictionary
+            foreach (KeyValuePair<int, string> city in _cities)
+            {
+                _citiesInverted.Add(city.Value, city.Key);
+            }
 
-            //// Create transport types dictionary
-            //_transportTypes = new Dictionary<int, string>()
-            //{
-            //    {0, "Bus"},
-            //    {1, "Plane"},
-            //    {2, "Train"}
-            //};
-
-            //// Create path finder
-            //_pathFinder = new PathFinder(_connections, _cities, _transportTypes);
+            // Fill cbxSource and cbxDestination comboboxes with cities
+            foreach (KeyValuePair<int, string> city in _cities)
+            {
+                cbxSource.Items.Add(city.Value);
+                cbxDestination.Items.Add(city.Value);
+            }
 
             // Create path finder
             _pathFinder = new PathFinder(_connections, _cities, _transportTypes);
@@ -137,8 +127,8 @@ namespace GdzieDojade
         private void btnSearchConnection_Click(object sender, EventArgs e)
         {
             // Get cities id's
-            int sourceId = (int)numSourceId.Value;
-            int destinationId = (int)numDestinationId.Value;
+            int sourceId = (int)_citiesInverted[cbxSource.SelectedItem.ToString()];
+            int destinationId = (int)_citiesInverted[cbxDestination.SelectedItem.ToString()];
 
             // Connect to database
             //using (SqlConnection connection = new SqlConnection("Data Source=.;Initial Catalog=TravelAgency;Integrated Security=True"))
@@ -204,13 +194,13 @@ namespace GdzieDojade
 
                 // Write path to console
                 // _pathFinder.WritePath(path);
-                lblReturn.Text = _pathFinder.PathToString(path);
+                //lblReturn.Text = _pathFinder.PathToString(path);
 
             }
             catch (Exception ex)
             {
                 // Console.WriteLine(ex.Message);
-                lblReturn.Text = ex.Message;
+                //lblReturn.Text = ex.Message;
             }
         }
     }

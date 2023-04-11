@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace GdzieDojade
 {
     public partial class MainForm : Form
@@ -23,8 +22,8 @@ namespace GdzieDojade
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'gdzieDojadeDBDataSet.Connections' table. You can move, or remove it, as needed.
-            this.connectionsTableAdapter.Fill(this.gdzieDojadeDBDataSet.Connections);
+            //// TODO: This line of code loads data into the 'gdzieDojadeDBDataSet.Connections' table. You can move, or remove it, as needed.
+            //this.connectionsTableAdapter.Fill(this.gdzieDojadeDBDataSet.Connections);
 
             // Create connection string
             string connectionString = Properties.Settings.Default.GdzieDojadeDBConnectionString;
