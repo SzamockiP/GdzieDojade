@@ -156,6 +156,12 @@ namespace GdzieDojade
 
         private void btnSearchConnection_Click(object sender, EventArgs e)
         {
+            // Check if source and destination are selected
+            if(cbxSource.SelectedItem == null || cbxDestination.SelectedItem == null)
+            {
+                return;
+            }
+
             // Get cities id's
             int sourceId = _citiesInverted[cbxSource.SelectedItem.ToString()];
             int destinationId = _citiesInverted[cbxDestination.SelectedItem.ToString()];
@@ -238,6 +244,9 @@ namespace GdzieDojade
                 // Write path to console
                 _pathFinder.WritePath(path);
                 //lblReturn.Text = _pathFinder.PathToString(path);
+
+                // Show path in pnlConnectionResponse
+                pnlConnectionResponse.Controls.Add(new ConnectionsDisplay(path, _cities, _transportTypes));
 
             }
             catch (Exception ex)

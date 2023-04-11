@@ -35,6 +35,7 @@
             this.cbxSearchType = new System.Windows.Forms.ComboBox();
             this.cbxSource = new System.Windows.Forms.ComboBox();
             this.cbxDestination = new System.Windows.Forms.ComboBox();
+            this.pnlConnectionResponse = new System.Windows.Forms.Panel();
             this.pnlSearchData.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,11 +106,20 @@
             this.cbxDestination.Size = new System.Drawing.Size(121, 21);
             this.cbxDestination.TabIndex = 18;
             // 
+            // pnlConnectionResponse
+            // 
+            this.pnlConnectionResponse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlConnectionResponse.Location = new System.Drawing.Point(0, 100);
+            this.pnlConnectionResponse.Name = "pnlConnectionResponse";
+            this.pnlConnectionResponse.Size = new System.Drawing.Size(681, 471);
+            this.pnlConnectionResponse.TabIndex = 16;
+            // 
             // SearchConnectionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pnlConnectionResponse);
             this.Controls.Add(this.pnlSearchData);
             this.Name = "SearchConnectionControl";
             this.Size = new System.Drawing.Size(681, 571);
@@ -127,5 +137,6 @@
         private System.Windows.Forms.DateTimePicker dtpDepartureTime;
         private System.Windows.Forms.ComboBox cbxDestination;
         private System.Windows.Forms.ComboBox cbxSource;
+        private System.Windows.Forms.Panel pnlConnectionResponse;
     }
 }

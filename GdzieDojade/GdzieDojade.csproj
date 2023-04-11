@@ -64,6 +64,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="ConnectionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConnectionPanel.Designer.cs">
+      <DependentUpon>ConnectionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionsDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConnectionsDisplay.Designer.cs">
+      <DependentUpon>ConnectionsDisplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +96,12 @@
     <Compile Include="SearchConnectionControl.Designer.cs">
       <DependentUpon>SearchConnectionControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConnectionPanel.resx">
+      <DependentUpon>ConnectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectionsDisplay.resx">
+      <DependentUpon>ConnectionsDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
