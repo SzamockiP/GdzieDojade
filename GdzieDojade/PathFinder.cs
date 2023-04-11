@@ -132,7 +132,7 @@ namespace GdzieDojade
                 }
             }
             // If there is no path, throw exception
-            catch (Exception ex) { throw new Exception(ex.Message); }
+            catch (Exception ex) { throw new Exception("Nie znaleziono połączenia"); }
             
         }
 

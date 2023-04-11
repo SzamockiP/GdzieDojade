@@ -33,8 +33,8 @@ namespace GdzieDojade
             // Fill labels with data
             lblSource.Text = _cities[_connection.Source];
             lblDestination.Text = _cities[_connection.Destination];
-            lblDistance.Text = _connection.Distance.ToString();
-            lblPrice.Text = _connection.Price.ToString();
+            lblDistance.Text = _connection.Distance.ToString() + " Km";
+            lblPrice.Text = _connection.Price.ToString() + " PLN";
             lblDepartureTime.Text = _connection.DepartureTime.ToString();
             lblArrivalTime.Text = _connection.ArrivalTime.ToString();
             lblTransportType.Text = _transportTypes[_connection.TransportType];

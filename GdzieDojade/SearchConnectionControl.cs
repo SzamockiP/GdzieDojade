@@ -31,6 +31,9 @@ namespace GdzieDojade
 
         private void SearchConnectionControl_Load(object sender, EventArgs e)
         {
+            // hide pnlConnectionControl
+            pnlConnectionControl.Visible = false;
+
             // Connect to database and fill connections list
             using (SqlConnection connection = new SqlConnection(_sqlConnectionString))
             {
@@ -240,6 +243,22 @@ namespace GdzieDojade
             {
                 // Find path between two cities
                 List<Connection> path = _pathFinder.FindPath(sourceId, destinationId, departureTime, searchType);
+                
+                // Show summary
+                pnlConnectionControl.Visible = true;
+
+                // 
+                int sumPrice = 0;
+                foreach(Connection connection in path)
+                {
+                    sumPrice += connection.Price;
+                }
+                DateTime startTime = path[0].DepartureTime;
+                DateTime endTime = path[path.Count - 1].ArrivalTime;
+
+                lblSummaryDepartureTime.Text = startTime.ToString();
+                lblSummaryArrivalTime.Text = endTime.ToString();
+                lblSummaryPrice.Text = sumPrice.ToString() + " PLN";
 
                 // Write path to console
                 //_pathFinder.WritePath(path);
@@ -251,8 +270,16 @@ namespace GdzieDojade
             catch (Exception ex)
             {
                 //Console.WriteLine(ex.Message);
+                pnlConnectionControl.Visible = false;
                 pnlConnectionResponse.Controls.Add(new ConnectionNotFoundDisplay(ex.Message));
             }
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            int temp = cbxSource.SelectedIndex;
+            cbxSource.SelectedIndex = cbxDestination.SelectedIndex;
+            cbxDestination.SelectedIndex = temp;
         }
     }
 }

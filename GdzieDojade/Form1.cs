@@ -52,13 +52,5 @@ namespace GdzieDojade
         {
             Close();
         }
-
-        private void connectionsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.connectionsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.gdzieDojadeDBDataSet);
-
-        }
     }
 }
