@@ -47,20 +47,20 @@
             // lblSource
             // 
             this.lblSource.AutoSize = true;
-            this.lblSource.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSource.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSource.Location = new System.Drawing.Point(54, 10);
             this.lblSource.Name = "lblSource";
-            this.lblSource.Size = new System.Drawing.Size(68, 30);
+            this.lblSource.Size = new System.Drawing.Size(66, 30);
             this.lblSource.TabIndex = 0;
             this.lblSource.Text = "label1";
             // 
             // lblDestination
             // 
             this.lblDestination.AutoSize = true;
-            this.lblDestination.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDestination.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDestination.Location = new System.Drawing.Point(54, 45);
             this.lblDestination.Name = "lblDestination";
-            this.lblDestination.Size = new System.Drawing.Size(68, 30);
+            this.lblDestination.Size = new System.Drawing.Size(66, 30);
             this.lblDestination.TabIndex = 1;
             this.lblDestination.Text = "label2";
             // 
@@ -77,17 +77,17 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(581, 71);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(68, 30);
+            this.lblPrice.Size = new System.Drawing.Size(66, 30);
             this.lblPrice.TabIndex = 3;
             this.lblPrice.Text = "label4";
             // 
             // lblDepartureTime
             // 
             this.lblDepartureTime.AutoSize = true;
-            this.lblDepartureTime.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartureTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepartureTime.Location = new System.Drawing.Point(297, 15);
             this.lblDepartureTime.Name = "lblDepartureTime";
             this.lblDepartureTime.Size = new System.Drawing.Size(55, 23);
@@ -97,7 +97,7 @@
             // lblArrivalTime
             // 
             this.lblArrivalTime.AutoSize = true;
-            this.lblArrivalTime.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArrivalTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArrivalTime.Location = new System.Drawing.Point(297, 50);
             this.lblArrivalTime.Name = "lblArrivalTime";
             this.lblArrivalTime.Size = new System.Drawing.Size(55, 23);
@@ -147,10 +147,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(521, 71);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 30);
+            this.label4.Size = new System.Drawing.Size(64, 30);
             this.label4.TabIndex = 10;
             this.label4.Text = "Cena:";
             // 
@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(234)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);

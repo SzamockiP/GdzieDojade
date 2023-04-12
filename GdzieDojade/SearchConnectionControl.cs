@@ -277,9 +277,16 @@ namespace GdzieDojade
 
         private void btnChange_Click(object sender, EventArgs e)
         {
+            // Change source and destination
             int temp = cbxSource.SelectedIndex;
             cbxSource.SelectedIndex = cbxDestination.SelectedIndex;
             cbxDestination.SelectedIndex = temp;
+        }
+
+        private void btnBookConnection_Click(object sender, EventArgs e)
+        {
+            // Show msgBox with info
+            MessageBox.Show("Funkcja niedostępna w wersji 1.0", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

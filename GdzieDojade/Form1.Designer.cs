@@ -44,7 +44,7 @@
             // 
             // pnlNavBar
             // 
-            this.pnlNavBar.BackColor = System.Drawing.Color.Gainsboro;
+            this.pnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
             this.pnlNavBar.Controls.Add(this.buttonClose);
             this.pnlNavBar.Controls.Add(this.btnOpenSearchConnectionPanel);
             this.pnlNavBar.Dock = System.Windows.Forms.DockStyle.Right;
@@ -55,11 +55,11 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.White;
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonClose.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.buttonClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonClose.Location = new System.Drawing.Point(0, 531);
             this.buttonClose.Name = "buttonClose";
@@ -71,11 +71,11 @@
             // 
             // btnOpenSearchConnectionPanel
             // 
-            this.btnOpenSearchConnectionPanel.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.btnOpenSearchConnectionPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnOpenSearchConnectionPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOpenSearchConnectionPanel.FlatAppearance.BorderSize = 0;
             this.btnOpenSearchConnectionPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpenSearchConnectionPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpenSearchConnectionPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenSearchConnectionPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnOpenSearchConnectionPanel.Location = new System.Drawing.Point(0, 0);
             this.btnOpenSearchConnectionPanel.Name = "btnOpenSearchConnectionPanel";
