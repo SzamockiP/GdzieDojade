@@ -45,15 +45,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBookConnection = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlSearchData.SuspendLayout();
             this.pnlConnectionControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearchConnection
             // 
-            this.btnSearchConnection.Location = new System.Drawing.Point(382, 17);
+            this.btnSearchConnection.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnSearchConnection.Location = new System.Drawing.Point(557, 12);
             this.btnSearchConnection.Name = "btnSearchConnection";
-            this.btnSearchConnection.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchConnection.Size = new System.Drawing.Size(110, 64);
             this.btnSearchConnection.TabIndex = 12;
             this.btnSearchConnection.Text = "Wyszukaj";
             this.btnSearchConnection.UseVisualStyleBackColor = true;
@@ -62,6 +66,9 @@
             // pnlSearchData
             // 
             this.pnlSearchData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlSearchData.Controls.Add(this.label6);
+            this.pnlSearchData.Controls.Add(this.label4);
+            this.pnlSearchData.Controls.Add(this.label3);
             this.pnlSearchData.Controls.Add(this.btnChange);
             this.pnlSearchData.Controls.Add(this.cbxDestination);
             this.pnlSearchData.Controls.Add(this.cbxSource);
@@ -77,7 +84,8 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(23, 71);
+            this.btnChange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.Location = new System.Drawing.Point(54, 71);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(121, 23);
             this.btnChange.TabIndex = 19;
@@ -88,43 +96,48 @@
             // cbxDestination
             // 
             this.cbxDestination.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxDestination.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDestination.FormattingEnabled = true;
-            this.cbxDestination.Location = new System.Drawing.Point(23, 43);
+            this.cbxDestination.Location = new System.Drawing.Point(54, 43);
             this.cbxDestination.Name = "cbxDestination";
-            this.cbxDestination.Size = new System.Drawing.Size(121, 21);
+            this.cbxDestination.Size = new System.Drawing.Size(121, 25);
             this.cbxDestination.TabIndex = 18;
             // 
             // cbxSource
             // 
             this.cbxSource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSource.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSource.FormattingEnabled = true;
-            this.cbxSource.Location = new System.Drawing.Point(23, 15);
+            this.cbxSource.Location = new System.Drawing.Point(54, 12);
             this.cbxSource.Name = "cbxSource";
-            this.cbxSource.Size = new System.Drawing.Size(121, 21);
+            this.cbxSource.Size = new System.Drawing.Size(121, 25);
             this.cbxSource.TabIndex = 17;
             // 
             // cbxSearchType
             // 
             this.cbxSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSearchType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxSearchType.FormattingEnabled = true;
-            this.cbxSearchType.Location = new System.Drawing.Point(176, 42);
+            this.cbxSearchType.Location = new System.Drawing.Point(279, 47);
             this.cbxSearchType.Name = "cbxSearchType";
-            this.cbxSearchType.Size = new System.Drawing.Size(121, 21);
+            this.cbxSearchType.Size = new System.Drawing.Size(137, 25);
             this.cbxSearchType.TabIndex = 16;
             // 
             // clbTransportTypes
             // 
+            this.clbTransportTypes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clbTransportTypes.FormattingEnabled = true;
-            this.clbTransportTypes.Location = new System.Drawing.Point(463, 17);
+            this.clbTransportTypes.Location = new System.Drawing.Point(422, 12);
             this.clbTransportTypes.Name = "clbTransportTypes";
-            this.clbTransportTypes.Size = new System.Drawing.Size(120, 49);
+            this.clbTransportTypes.Size = new System.Drawing.Size(117, 64);
             this.clbTransportTypes.TabIndex = 15;
             // 
             // dtpDepartureTime
             // 
-            this.dtpDepartureTime.Location = new System.Drawing.Point(176, 16);
+            this.dtpDepartureTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDepartureTime.Location = new System.Drawing.Point(216, 12);
             this.dtpDepartureTime.Name = "dtpDepartureTime";
-            this.dtpDepartureTime.Size = new System.Drawing.Size(200, 20);
+            this.dtpDepartureTime.Size = new System.Drawing.Size(200, 25);
             this.dtpDepartureTime.TabIndex = 0;
             // 
             // pnlConnectionResponse
@@ -222,6 +235,36 @@
             this.btnBookConnection.UseVisualStyleBackColor = true;
             this.btnBookConnection.Click += new System.EventHandler(this.btnBookConnection_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(216, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 21);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Rodzaj";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 21);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Z: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 21);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Do:";
+            // 
             // SearchConnectionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +277,7 @@
             this.Size = new System.Drawing.Size(681, 571);
             this.Load += new System.EventHandler(this.SearchConnectionControl_Load);
             this.pnlSearchData.ResumeLayout(false);
+            this.pnlSearchData.PerformLayout();
             this.pnlConnectionControl.ResumeLayout(false);
             this.pnlConnectionControl.PerformLayout();
             this.ResumeLayout(false);
@@ -258,5 +302,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
