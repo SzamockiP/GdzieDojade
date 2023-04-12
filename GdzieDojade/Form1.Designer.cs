@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlNavBar = new System.Windows.Forms.Panel();
-            this.buttonClose = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.btnOpenSearchConnectionPanel = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.gdzieDojadeDBDataSet = new GdzieDojade.GdzieDojadeDBDataSet();
@@ -45,7 +45,7 @@
             // pnlNavBar
             // 
             this.pnlNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(230)))));
-            this.pnlNavBar.Controls.Add(this.buttonClose);
+            this.pnlNavBar.Controls.Add(this.btnClose);
             this.pnlNavBar.Controls.Add(this.btnOpenSearchConnectionPanel);
             this.pnlNavBar.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlNavBar.Location = new System.Drawing.Point(681, 0);
@@ -53,21 +53,21 @@
             this.pnlNavBar.Size = new System.Drawing.Size(223, 571);
             this.pnlNavBar.TabIndex = 9;
             // 
-            // buttonClose
+            // btnClose
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.buttonClose.Location = new System.Drawing.Point(0, 531);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(223, 40);
-            this.buttonClose.TabIndex = 1;
-            this.buttonClose.Text = "Zamknij";
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClose.Location = new System.Drawing.Point(0, 531);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(223, 40);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Zamknij";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // btnOpenSearchConnectionPanel
             // 
@@ -125,7 +125,7 @@
             this.MaximumSize = new System.Drawing.Size(920, 610);
             this.MinimumSize = new System.Drawing.Size(920, 610);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "GdzieDojade";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.pnlNavBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdzieDojadeDBDataSet)).EndInit();
@@ -138,7 +138,7 @@
         private System.Windows.Forms.Panel pnlNavBar;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Button btnOpenSearchConnectionPanel;
-        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button btnClose;
         private GdzieDojadeDBDataSet gdzieDojadeDBDataSet;
         private System.Windows.Forms.BindingSource connectionsBindingSource;
         private GdzieDojadeDBDataSetTableAdapters.ConnectionsTableAdapter connectionsTableAdapter;
