@@ -84,7 +84,7 @@
             // 
             // btnChange
             // 
-            this.btnChange.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChange.Location = new System.Drawing.Point(54, 71);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(121, 23);
