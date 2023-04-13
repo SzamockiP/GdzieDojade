@@ -33,6 +33,7 @@
             // 
             // flpConnections
             // 
+            this.flpConnections.AutoScroll = true;
             this.flpConnections.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpConnections.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpConnections.Location = new System.Drawing.Point(0, 0);
